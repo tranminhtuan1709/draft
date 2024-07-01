@@ -1,14 +1,8 @@
-def customers(time, services):
-    if (time < 0 or time > 8) and (services < 0 or services > 16):
-        return "Invalid"
-    if time <= 3 and services <= 5:
-        return "New Customers"
-    if time >= 4 and services > 6:
-        return "Vip Customers"
-    return "Potential Customers"
-
-if __name__ == "__main__":
-    time = [5, 4, 6, 2, 2, 13, 17, 15, -5]
-    services = [-7, 5, 7, 7, 3, 4, 25, -9, -37]
-    for i in range(len(time)):
-        print(i + 1, customers(time[i], services[i]))
+month = ["January", "February", "March", "April", "May", "June",
+         "July","August", "September", "October", "November", "December"]
+number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+for i in range(6, len(month)):
+    d = ""
+    s = "COUNTIF(...!F:F, FALSE) + COUNTIF(...!H:H, FALSE)+ COUNTIF(...!J:J, FALSE) + COUNTIF(...!L:L, FALSE) + "
+    d += s.replace('...', month[i], -1)
+    print(d)
